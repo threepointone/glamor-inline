@@ -40,5 +40,23 @@ we could do this -
 </html>
 ```
 
+
+pros 
+--- 
+
+- progressively load just the precise css you need, precisely when you need it
+
+
+cons
+---
+
+- hyper optimization 
+- unclear runtime characteristics
+- breaks react checksums 
+
+
+
+todo
+---
 - stream it 
-- breaks checksums, but eh
+- try not to break checksums 
