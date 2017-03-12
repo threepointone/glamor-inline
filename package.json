@@ -1,12 +1,14 @@
 {
   "name": "glamor-inline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "build": "babel src -d lib --presets env,stage-0,react"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-preset-env": "^1.2.1",
