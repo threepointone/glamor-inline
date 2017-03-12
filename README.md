@@ -40,12 +40,26 @@ we could do this -
 </html>
 ```
 
+usage
+---
+```jsx
+
+import { renderToString } from 'react-dom/server'
+import inline from 'glamor-inline'
+
+class App extends React.Component {
+  // ...
+}
+
+let html = renderToString(<App/>)
+let inlinedHtml = inline(html)
+```
 
 pros 
 --- 
 
 - progressively load just the precise css you need, precisely when you need it
-
+- based on ideas [in this post](https://jakearchibald.com/2016/link-in-body/)
 
 cons
 ---
