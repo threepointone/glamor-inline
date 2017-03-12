@@ -13,11 +13,15 @@ function toTag(ids){
   return `<style>${rules.map(x => x.cssText).join('')}</style>`
 }
 
-export default function(html, rules){
+export default function(html){
   let regex = /\<|css\-([a-zA-Z0-9]+)/gm
+
   let match, lastBackIndex = 0, idBuffer = [], result = [], insed = {}
+
+  let plain = styleSheet.rules().filter(x => !(/css\-([a-zA-Z0-9]+)/gm.exec(x.cssText)));
+  (plain.length > 0) && result.push(`<style>${plain.map(x => x.cssText)}</style>`)
+
   while((match = regex.exec(html)) !== null){
-    debugger;
     if(match[0] === '<'){
       idBuffer = idBuffer.filter(x => !insed[x]);
       (idBuffer.length > 0) && result.push(toTag(idBuffer))
@@ -33,5 +37,4 @@ export default function(html, rules){
   }
   result.push(html.substring(lastBackIndex, html.length))
   return result.join('')
-
 }

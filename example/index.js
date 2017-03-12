@@ -2,6 +2,8 @@
 import { css } from 'glamor'
 import React from 'react'
 
+css.global(`body`, { padding: 40 })
+
 
 
 export default  () => 
