@@ -1,7 +1,7 @@
 import React from 'react'
 import webpack from 'webpack'
 import fs from 'fs'
-import { renderToStaticMarkup } from 'react-dom/server'
+import { renderToString } from 'react-dom/server'
 import inline from '../src'
 import App from './index.js'
 
@@ -26,8 +26,8 @@ let config = {
 
 fs.writeFileSync('./example/index.html', `<html>
   <body>
-    <div id='root'>${inline(renderToStaticMarkup(<App/>))}</div>
-    
+    <div id='root'>${inline(renderToString(<App/>))}</div>
+    <script src='bundle.js'></script>
   </body>
   </html>`)
 
