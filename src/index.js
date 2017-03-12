@@ -34,6 +34,7 @@ export default function(html, rules){
     }
     
   }
+  result.push(html.substring(lastBackIndex, html.length))
   return result.join('')
 
 }
