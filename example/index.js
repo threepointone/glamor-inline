@@ -1,10 +1,10 @@
 
-import { css, styleSheet } from 'glamor'
-import inline from '../src'
+import { css } from 'glamor'
 import React from 'react'
-import { renderToStaticMarkup } from 'react-dom/server'
 
-const App = () => 
+
+
+export default  () => 
   <div className={css({ color: 'red' })} 
     {...css({ border: '1px solid green'}) }>
       <span>Some text here</span> 
@@ -16,6 +16,3 @@ const App = () =>
 
 
 
-let inlined = inline(renderToStaticMarkup(<App/>))
-
-console.log(inlined)

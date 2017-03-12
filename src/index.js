@@ -1,9 +1,6 @@
 import { styleSheet } from 'glamor'
 
-function toTag(ids){
-  if(ids.length === 0) {
-    return ''
-  }
+function toTag(ids){  
   let idhash = ids.reduce((o, x) => (o[x + ''] = true, o), {})
   let rules = styleSheet.rules().filter(x => {
     let regex = /css\-([a-zA-Z0-9]+)/gm
