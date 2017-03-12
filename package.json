@@ -1,0 +1,16 @@
+{
+  "name": "glamor-inline",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "glamor": "next",
+    "glamor-server": "next",
+    "react": "next",
+    "react-dom": "next"
+  }
+}
