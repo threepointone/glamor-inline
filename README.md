@@ -71,3 +71,4 @@ cons
 todo
 ---
 - stream it 
+- tests
