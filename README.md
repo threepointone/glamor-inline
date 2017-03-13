@@ -59,14 +59,13 @@ pros
 
 - progressively load just the precise css you need, precisely when you need it
 - based on ideas [in this post](https://jakearchibald.com/2016/link-in-body/)
-- doesn't break react checksums
 
 cons
 ---
 
 - hyper optimization 
 - unclear runtime characteristics
-
+- breaks react checksums :()
 
 todo
 ---
