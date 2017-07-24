@@ -1,3 +1,5 @@
+DEPRECATED - just use glamor/inline
+
 glamor-inline 
 ---
 
